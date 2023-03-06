@@ -5,9 +5,16 @@ import github from './assets/github.png';
 import instagram from './assets/instagram.png';
 import linkedin from './assets/linkedin.png';
 import telegram from './assets/telegram.png';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
+    <>
+    <Helmet>
+        <title>Ansab</title>
+        <meta property="og:image" content="https://example.com/your-image.jpg" />
+      </Helmet>
+    
     <div className="App">
       <img src={profileImage} className="profile_image" alt="profile Image" />
       <h1 className='name'>Ansab V</h1>
@@ -26,7 +33,7 @@ function App() {
         <img src={linkedin} onClick={() => window.open(`https://www.linkedin.com/in/ansab-v-536653215`, '_blank')} className="linkedin" alt="linkedin" />
         <img src={telegram} onClick={() => window.open(`http://t.me/Ansab_av`, '_blank')} className="telegram" alt="telegram" />
       </div>
-    </div>
+    </div></>
   );
 }
 
